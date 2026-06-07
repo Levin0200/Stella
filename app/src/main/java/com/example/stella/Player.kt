@@ -1,5 +1,6 @@
 package com.example.stella
 
+import android.view.View
 import android.content.Intent
 import android.os.Bundle
 import android.widget.AdapterView
@@ -76,11 +77,21 @@ class Player : AppCompatActivity() {
         binding.spinnerCharacter.adapter = adapter
 
         selectedCharacterImage = characterList[0].imageResId
-        binding.imgPlayer.setImageResource(selectedCharacterImage)
 
         binding.spinnerCharacter.onItemSelectedListener =
             object : AdapterView.OnItemSelectedListener {
 
+                override fun onItemSelected(
+                    parent: AdapterView<*>?,
+                    view: View?,
+                    position: Int,
+                    id: Long
+                ) {
+                    selectedCharacterImage = characterList[position].imageResId
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>?) {
+                }
             }
     }
 }
