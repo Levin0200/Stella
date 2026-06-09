@@ -77,10 +77,11 @@
         <Spinner
             android:id="@+id/spinnerCharacter"
             android:layout_width="240dp"
-            android:layout_height="330dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="18dp"
-            android:backgroundTint="#C9C3FF" />
+            android:layout_height="320dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/transparent"
+            android:popupBackground="#111827"
+            android:dropDownWidth="240dp" />
 
         <Button
             android:id="@+id/btnNext"
