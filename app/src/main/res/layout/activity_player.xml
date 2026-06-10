@@ -80,6 +80,7 @@
             android:layout_height="320dp"
             android:layout_gravity="center_horizontal"
             android:background="@android:color/transparent"
+            android:layout_marginTop="18dp"
             android:popupBackground="#111827"
             android:dropDownWidth="240dp" />
 
