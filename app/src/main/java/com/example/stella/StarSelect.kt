@@ -28,6 +28,12 @@ class StarSelect : AppCompatActivity() {
         setContentView(binding.root)
 
         val nickname = intent.getStringExtra("nickname")
+        val visitedStella1 = intent.getBooleanExtra("visitedStella1", false)
+        val visitedStellaPost = intent.getBooleanExtra("visitedStellaPost", false)
+        val visitedStellaTeacher = intent.getBooleanExtra("visitedStellaTeacher", false)
+        val visitedStellaScholar = intent.getBooleanExtra("visitedStellaScholar", false)
+        val visitedStellaFarmer = intent.getBooleanExtra("visitedStellaFarmer", false)
+
 
         binding.txtStarSub.text = "$nickname 여행자님, \n 어떤 꿈의 흔적을 따라가시겠습니까?"
 
@@ -93,12 +99,42 @@ class StarSelect : AppCompatActivity() {
                     binding.txtDreamType.text = selected.type
                     binding.txtDreamDesc.text = selected.description
 
+                    val isVisited = when(selected.title) {
+
+                        "하늘섬의 항해사" ->
+                            visitedStella1
+
+                        "별빛 우체부" ->
+                            visitedStellaPost
+
+                        "왕립 마법학교의 낙제생" ->
+                            visitedStellaScholar
+
+                        "가장 높은 탑의 학자" ->
+                           visitedStellaScholar
+
+                        "마지막 정원사" ->
+                            visitedStellaFarmer
+
+                        else ->
+                            false
+                    }
+
+                    //3항연산으로 처리할까 했는데 3항연산보다 그냥 기본 if문이 이 코드에선 더 간결할것 같습니다.
+                    if (isVisited) {
+                        binding.txtStarSub.text =
+                            "$nickname 여행자님, \n 이미 발견한 흔적입니다."
+                    }
+
+
+
                 }
 
                 override fun onNothingSelected(p0: AdapterView<*>?) {
                 }
 
             }
+
 
 
         //이 흔적을 따라간다는 버튼을 눌렀을때 보내줄 Explict intent data들
@@ -117,6 +153,13 @@ class StarSelect : AppCompatActivity() {
             intent.putExtra("imageId", seletedDream.imageResId)
 
             intent.putExtra("nickname", nickname)
+
+            intent.putExtra("visitedStella1", visitedStella1)
+            intent.putExtra("visitedStellaPost", visitedStellaPost)
+            intent.putExtra("visitedStellaTeacher", visitedStellaTeacher)
+            intent.putExtra("visitedStellaScholar", visitedStellaScholar)
+            intent.putExtra("visitedStellaFramer", visitedStellaFarmer)
+
 
 
             startActivity(intent)

@@ -19,7 +19,14 @@ class Story : AppCompatActivity() {
         val type = intent.getStringExtra("type")
         val description = intent.getStringExtra("description")
         val imageId = intent.getIntExtra("imageId", R.drawable.stella_star1)
+
         val nickname = intent.getStringExtra("nickname")
+
+        val visitedStella1 = intent.getBooleanExtra("visitedStella1", false)
+        val visitedStellaPost = intent.getBooleanExtra("visitedStellaPost", false)
+        val visitedStellaTeacher = intent.getBooleanExtra("visitedStellaTeacher", false)
+        val visitedStellaScholar = intent.getBooleanExtra("visitedStellaScholar", false)
+        val visitedStellaFarmer = intent.getBooleanExtra("visitedStellaFarmer", false)
 
         binding.txtStoryTitle.text = title
         binding.txtStoryType.text = type
@@ -217,6 +224,13 @@ class Story : AppCompatActivity() {
             intent.putExtra("description", description)
             intent.putExtra("imageId", imageId)
             intent.putExtra("nickname", nickname)
+
+            //한번이라도 방문했는지에 대한 상태값을 or 처리함으로써 로직을 더 효율적으로 처리할 수 있음
+            intent.putExtra("visitedVoyager", visitedStella1 || title == "하늘섬의 항해사")
+            intent.putExtra("visitedPostman", visitedStellaPost || title == "별빛 우체부")
+            intent.putExtra("visitedTeacher", visitedStellaTeacher || title == "왕립 마법학교의 낙제생")
+            intent.putExtra("visitedScholar", visitedStellaScholar || title == "가장 높은 탑의 학자")
+            intent.putExtra("visitedGardener", visitedStellaFarmer || title == "마지막 정원사")
 
             startActivity(intent)
         }

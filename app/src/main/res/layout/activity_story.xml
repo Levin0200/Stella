@@ -112,7 +112,7 @@
                 android:layout_height="56dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="12dp"
-                android:text="별의 흔적을 기록한다."
+                android:text="별의 흔적을 기록합니다."
                 android:textColor="#FFFFFF"
                 android:textSize="17sp"
                 android:textStyle="bold"
