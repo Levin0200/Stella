@@ -99,33 +99,25 @@ class StarSelect : AppCompatActivity() {
                     binding.txtDreamType.text = selected.type
                     binding.txtDreamDesc.text = selected.description
 
-                    val isVisited = when(selected.title) {
 
-                        "하늘섬의 항해사" ->
-                            visitedStella1
+                    val isVisited = when(selected.imageResId) {
 
-                        "별빛 우체부" ->
-                            visitedStellaPost
+                        R.drawable.stella_star1 -> visitedStella1
+                        R.drawable.stella_post -> visitedStellaPost
+                        R.drawable.stella_teacher -> visitedStellaTeacher
+                        R.drawable.stella_scholar -> visitedStellaScholar
+                        R.drawable.stella_farmer -> visitedStellaFarmer
 
-                        "왕립 마법학교의 낙제생" ->
-                            visitedStellaScholar
-
-                        "가장 높은 탑의 학자" ->
-                           visitedStellaScholar
-
-                        "마지막 정원사" ->
-                            visitedStellaFarmer
-
-                        else ->
-                            false
+                        else -> false
                     }
 
-                    //3항연산으로 처리할까 했는데 3항연산보다 그냥 기본 if문이 이 코드에선 더 간결할것 같습니다.
                     if (isVisited) {
                         binding.txtStarSub.text =
                             "$nickname 여행자님, \n 이미 발견한 흔적입니다."
+                    } else {
+                        binding.txtStarSub.text =
+                            "$nickname 여행자님, \n 어떤 꿈의 흔적을 따라가시겠습니까?"
                     }
-
 
 
                 }
@@ -158,9 +150,7 @@ class StarSelect : AppCompatActivity() {
             intent.putExtra("visitedStellaPost", visitedStellaPost)
             intent.putExtra("visitedStellaTeacher", visitedStellaTeacher)
             intent.putExtra("visitedStellaScholar", visitedStellaScholar)
-            intent.putExtra("visitedStellaFramer", visitedStellaFarmer)
-
-
+            intent.putExtra("visitedStellaFarmer", visitedStellaFarmer)
 
             startActivity(intent)
         }

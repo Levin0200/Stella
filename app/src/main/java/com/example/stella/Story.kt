@@ -223,14 +223,16 @@ class Story : AppCompatActivity() {
             intent.putExtra("type", type)
             intent.putExtra("description", description)
             intent.putExtra("imageId", imageId)
+
             intent.putExtra("nickname", nickname)
 
             //한번이라도 방문했는지에 대한 상태값을 or 처리함으로써 로직을 더 효율적으로 처리할 수 있음
-            intent.putExtra("visitedVoyager", visitedStella1 || title == "하늘섬의 항해사")
-            intent.putExtra("visitedPostman", visitedStellaPost || title == "별빛 우체부")
+            //title이 아닌 imgId로 접근시키자 title로 가져가면 너무 불안정함
+            intent.putExtra("visitedStella1", visitedStella1 || imageId == visitedStella1")
+            intent.putExtra("visitedPost", visitedStellaPost || title == "별빛 우체부")
             intent.putExtra("visitedTeacher", visitedStellaTeacher || title == "왕립 마법학교의 낙제생")
             intent.putExtra("visitedScholar", visitedStellaScholar || title == "가장 높은 탑의 학자")
-            intent.putExtra("visitedGardener", visitedStellaFarmer || title == "마지막 정원사")
+            intent.putExtra("visitedFarmer", visitedStellaFarmer || title == "마지막 정원사")
 
             startActivity(intent)
         }
