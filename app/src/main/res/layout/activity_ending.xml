@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:text="별자리가 완성되었습니다"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp"
+                android:textSize="22.5sp"
                 android:textStyle="bold"
                 android:gravity="center" />
 

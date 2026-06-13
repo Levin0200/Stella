@@ -21,7 +21,10 @@ class Result : AppCompatActivity() {
         val type = intent.getStringExtra("type")
         val description = intent.getStringExtra("description")
         val imageId = intent.getIntExtra("imageId", R.drawable.stella_star1)
+
         val nickname = intent.getStringExtra("nickname")
+
+        val characterImage = intent.getIntExtra("characterImage", R.drawable.stella_boy)
 
         val visitedStella1 = intent.getBooleanExtra("visitedStella1", false)
         val visitedStellaPost = intent.getBooleanExtra("visitedStellaPost", false)
@@ -75,6 +78,7 @@ class Result : AppCompatActivity() {
                 val intent = Intent(this, Ending::class.java)
 
                 intent.putExtra("nickname", nickname)
+                intent.putExtra("characterImage", characterImage)
 
                 startActivity(intent)
             }
@@ -91,6 +95,7 @@ class Result : AppCompatActivity() {
                     Intent(this, StarSelect::class.java)
 
                 intent.putExtra("nickname", nickname)
+                intent.putExtra("characterImage", characterImage)
 
                 intent.putExtra("visitedStella1", visitedStella1)
                 intent.putExtra("visitedStellaPost", visitedStellaPost)

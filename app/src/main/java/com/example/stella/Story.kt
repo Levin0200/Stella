@@ -22,6 +22,8 @@ class Story : AppCompatActivity() {
 
         val nickname = intent.getStringExtra("nickname")
 
+        val characterImage = intent.getIntExtra("characterImage", R.drawable.stella_boy)
+
         val visitedStella1 = intent.getBooleanExtra("visitedStella1", false)
         val visitedStellaPost = intent.getBooleanExtra("visitedStellaPost", false)
         val visitedStellaTeacher = intent.getBooleanExtra("visitedStellaTeacher", false)
@@ -225,6 +227,8 @@ class Story : AppCompatActivity() {
             intent.putExtra("imageId", imageId)
 
             intent.putExtra("nickname", nickname)
+
+            intent.putExtra("characterImage", characterImage)
 
             //한번이라도 방문했는지에 대한 상태값을 or 처리함으로써 로직을 더 효율적으로 처리할 수 있음
             //title이 아닌 imgId로 접근시키자 title로 가져가면 너무 불안정함

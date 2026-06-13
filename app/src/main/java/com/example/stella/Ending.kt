@@ -16,8 +16,11 @@ class Ending : AppCompatActivity() {
         binding = ActivityEndingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val nickname = intent.getStringExtra("nickname") ?: ""
+        val nickname = intent.getStringExtra("nickname")
+        val characterImage = intent.getIntExtra("characterImage", R.drawable.stella_boy)
         var reviewScore = 5
+
+        binding.imgEnding.setImageResource(characterImage)
 
         binding.txtEndingBody.text =
             """

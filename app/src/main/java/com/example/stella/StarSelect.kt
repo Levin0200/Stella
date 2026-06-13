@@ -28,6 +28,9 @@ class StarSelect : AppCompatActivity() {
         setContentView(binding.root)
 
         val nickname = intent.getStringExtra("nickname")
+
+        val characterImage = intent.getIntExtra("characterImage", R.drawable.stella_boy)
+
         val visitedStella1 = intent.getBooleanExtra("visitedStella1", false)
         val visitedStellaPost = intent.getBooleanExtra("visitedStellaPost", false)
         val visitedStellaTeacher = intent.getBooleanExtra("visitedStellaTeacher", false)
@@ -145,6 +148,8 @@ class StarSelect : AppCompatActivity() {
             intent.putExtra("imageId", seletedDream.imageResId)
 
             intent.putExtra("nickname", nickname)
+
+            intent.putExtra("characterImage", characterImage)
 
             intent.putExtra("visitedStella1", visitedStella1)
             intent.putExtra("visitedStellaPost", visitedStellaPost)
