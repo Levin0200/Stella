@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/endingRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/stella1_1">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:paddingBottom="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/endingCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="28dp"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingTop="24dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="36dp"
+            android:background="#CC111827">
+
+            <TextView
+                android:id="@+id/txtEndingTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="별자리가 완성되었습니다"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/txtEndingSub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="다섯 개의 꿈의 흔적이 하나의 밤하늘에 기록되었습니다."
+                android:textColor="#C9C3FF"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:lineSpacingExtra="5dp"
+                android:layout_marginTop="10dp" />
+
+            <ImageView
+                android:id="@+id/imgEnding"
+                android:layout_width="match_parent"
+                android:layout_height="420dp"
+                android:layout_marginTop="24dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/stella1_1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="26dp"
+                android:background="#55C9C3FF" />
+
+            <TextView
+                android:id="@+id/txtEndingBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="이곳에는 다섯 개의 꿈이 남아 있습니다."
+                android:textColor="#E5E7EB"
+                android:textSize="16sp"
+                android:lineSpacingExtra="8dp"
+                android:layout_marginTop="22dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="26dp"
+                android:background="#55C9C3FF" />
+
+            <TextView
+                android:id="@+id/txtEndingMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="꿈은 사라지지 않습니다.\n다만 다른 별이 되어 남을 뿐입니다."
+                android:textColor="#DAD7FF"
+                android:textSize="17sp"
+                android:textStyle="italic"
+                android:gravity="center"
+                android:lineSpacingExtra="6dp"
+                android:layout_marginTop="22dp" />
+
+            <TextView
+                android:id="@+id/txtReviewScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="여운 점수: 5"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:layout_marginTop="28dp" />
+
+            <SeekBar
+                android:id="@+id/seekReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="10"
+                android:progress="5" />
+
+            <Button
+                android:id="@+id/btnShareReview"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:text="감상 공유하기"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:backgroundTint="#6D5DF6" />
+
+            <Button
+                android:id="@+id/btnGoMain"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="14dp"
+                android:text="처음으로 돌아가기"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:backgroundTint="#374151" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

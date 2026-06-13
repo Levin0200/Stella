@@ -64,21 +64,44 @@ class Result : AppCompatActivity() {
         if (visitedStellaScholar) count++
         if (visitedStellaFarmer) count++
 
-        binding.txtResultCount.text =
-            "현재 기록한 별 $count / 5"
+        if (count == 5) {
+            binding.txtResultCount.text =
+                "현재 기록한 별 $count / 5"
 
-        binding.btnBackToStars.setOnClickListener {
-            val intent = Intent(this, StarSelect::class.java)
+            binding.btnBackToStars.text =
+                "마지막 기록을 확인한다."
 
-            intent.putExtra("nickname", nickname)
+            binding.btnBackToStars.setOnClickListener {
+                val intent = Intent(this, Ending::class.java)
 
-            intent.putExtra("visitedStella1", visitedStella1)
-            intent.putExtra("visitedStellaPost", visitedStellaPost)
-            intent.putExtra("visitedStellaTeacher", visitedStellaTeacher)
-            intent.putExtra("visitedStellaScholar", visitedStellaScholar)
-            intent.putExtra("visitedStellaFarmer", visitedStellaFarmer)
+                intent.putExtra("nickname", nickname)
 
-            startActivity(intent)
+                startActivity(intent)
+            }
+        } else {
+            binding.txtResultCount.text =
+                "현재 기록한 별 $count / 5"
+
+            binding.btnBackToStars.text =
+                "다음 별의 기록을 확인한다."
+
+            binding.btnBackToStars.setOnClickListener {
+                val intent =
+
+                    Intent(this, StarSelect::class.java)
+
+                intent.putExtra("nickname", nickname)
+
+                intent.putExtra("visitedStella1", visitedStella1)
+                intent.putExtra("visitedStellaPost", visitedStellaPost)
+                intent.putExtra("visitedStellaTeacher", visitedStellaTeacher)
+                intent.putExtra("visitedStellaScholar", visitedStellaScholar)
+                intent.putExtra("visitedStellaFarmer", visitedStellaFarmer)
+
+                intent.putExtra("count", count)
+
+                startActivity(intent)
+            }
         }
     }
 }

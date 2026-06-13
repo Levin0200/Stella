@@ -228,12 +228,30 @@ class Story : AppCompatActivity() {
 
             //한번이라도 방문했는지에 대한 상태값을 or 처리함으로써 로직을 더 효율적으로 처리할 수 있음
             //title이 아닌 imgId로 접근시키자 title로 가져가면 너무 불안정함
-            intent.putExtra("visitedStella1", visitedStella1 || imageId == visitedStella1")
-            intent.putExtra("visitedPost", visitedStellaPost || title == "별빛 우체부")
-            intent.putExtra("visitedTeacher", visitedStellaTeacher || title == "왕립 마법학교의 낙제생")
-            intent.putExtra("visitedScholar", visitedStellaScholar || title == "가장 높은 탑의 학자")
-            intent.putExtra("visitedFarmer", visitedStellaFarmer || title == "마지막 정원사")
+            intent.putExtra(
+                "visitedStella1",
+                visitedStella1 || imageId == R.drawable.stella_star1
+            )
 
+            intent.putExtra(
+                "visitedStellaPost",
+                visitedStellaPost || imageId == R.drawable.stella_post
+            )
+
+            intent.putExtra(
+                "visitedStellaTeacher",
+                visitedStellaTeacher || imageId == R.drawable.stella_teacher
+            )
+
+            intent.putExtra(
+                "visitedStellaScholar",
+                visitedStellaScholar || imageId == R.drawable.stella_scholar
+            )
+
+            intent.putExtra(
+                "visitedStellaFarmer",
+                visitedStellaFarmer || imageId == R.drawable.stella_farmer
+            )
             startActivity(intent)
         }
     }

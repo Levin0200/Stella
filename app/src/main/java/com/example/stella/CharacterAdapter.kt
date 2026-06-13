@@ -43,7 +43,6 @@ class CharacterAdapter(
             items[position].imageResId
         )
 
-
         return view
     }
 }

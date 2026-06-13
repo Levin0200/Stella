@@ -116,7 +116,7 @@ class StarSelect : AppCompatActivity() {
                             "$nickname 여행자님, \n 이미 발견한 흔적입니다."
                     } else {
                         binding.txtStarSub.text =
-                            "$nickname 여행자님, \n 어떤 꿈의 흔적을 따라가시겠습니까?"
+                            "$nickname 여행자님, \n 어떤 별의 흔적을 따라가시겠습니까?"
                     }
 
 

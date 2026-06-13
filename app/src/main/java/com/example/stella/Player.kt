@@ -66,7 +66,7 @@ class Player : AppCompatActivity() {
             )
 
             intent.putExtra("nickname", nickname)
-            intent.putExtra("gender", selectedGender) //젠더는 Boolean값으로 처리해도 괜찮을거 같다.
+            intent.putExtra("gender", selectedGender)
             intent.putExtra("characterImage", selectedCharacterImage)
             startActivity(intent)
         }
