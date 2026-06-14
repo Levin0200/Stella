@@ -66,7 +66,6 @@ class Player : AppCompatActivity() {
             )
 
             intent.putExtra("nickname", nickname)
-            intent.putExtra("gender", selectedGender)
             intent.putExtra("characterImage", selectedCharacterImage)
             startActivity(intent)
         }
