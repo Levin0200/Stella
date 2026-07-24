@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌌 Stella
+# Stella
 
 ### *꿈을 마주하는 이야기*
 
