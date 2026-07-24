@@ -15,6 +15,7 @@ A story-driven adventure game developed with **Kotlin**
 ---
 
 # 📖 Overview
+---
 
 **Stella**는 플레이어가 별을 수집하며
 다양한 이야기와 선택을 경험하는
