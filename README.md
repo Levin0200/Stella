@@ -61,19 +61,26 @@ Ending
 
 ### 시작 화면
 
-<img src="docs/main.png" width="260" alt="Stella 시작 화면"/>
+<img src="docs/main.png" width="360" alt="Stella 시작 화면"/>
 
 ### 별 선택
 
-<img src="docs/gameplay.png" width="260" alt="별 선택 화면"/>
+<img src="docs/gameplay.png" width="360" alt="별 선택 화면"/>
 
 ### 이야기 진행
 
-<img src="docs/story.png" width="260" alt="스토리 화면"/>
+<img src="docs/story0.png" width="360" alt="스토리 화면"/>
+<img src="docs/story1.png" width="360" alt="스토리 화면"/>
+<img src="docs/story2.png" width="360" alt="스토리 화면"/>
+<img src="docs/story3.png" width="360" alt="스토리 화면"/>
+<img src="docs/story4.png" width="360" alt="스토리 화면"/>
+<img src="docs/story5.png" width="360" alt="스토리 화면"/>
 
 ### 엔딩
 
-<img src="docs/ending.png" width="260" alt="엔딩 화면"/>
+<img src="docs/ending0.png" width="360" alt="엔딩 화면"/>
+<img src="docs/ending1.png" width="360" alt="엔딩 화면"/>
+<img src="docs/ending2.png" width="360" alt="엔딩 화면"/>
 
 </div>
 
