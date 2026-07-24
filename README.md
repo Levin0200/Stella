@@ -98,7 +98,6 @@
 <p align="center">
   <img src="docs/ending0.png" width="240" alt="Stella 엔딩 화면 1">
   <img src="docs/ending1.png" width="240" alt="Stella 엔딩 화면 2">
-  <img src="docs/ending2.png" width="240" alt="Stella 엔딩 화면 3">
 </p>
 
 ---
