@@ -8,7 +8,7 @@ A story-driven adventure game developed with **Kotlin**
 
 ---
 
-<img src="docs/banner.png" width="900"/>
+<img src="Desktop/banner.png" width="900"/>
 
 </div>
 
