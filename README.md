@@ -7,6 +7,8 @@
 별을 선택하고 이야기를 따라가며,  
 자신의 꿈을 마주하는 **Kotlin 기반 Android 스토리 게임**
 
+*Every star leaves a story,
+every story leaves a dream.*
 <br>
 
 <img src="docs/banner.png" width="360" alt="Stella 시작 화면">
